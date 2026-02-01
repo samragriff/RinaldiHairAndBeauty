@@ -1,23 +1,187 @@
-# VS junk
+############################################################
+# OS / general junk
+############################################################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+############################################################
+# Logs
+############################################################
+*.log
+logs/
+log/
+
+############################################################
+# Visual Studio / VS Code / JetBrains Rider / IDE
+############################################################
 .vs/
 **/.vs/
-*.slnx
-
-# Build outputs
-bin/
-obj/
-
-# Local dev secrets
-**/appsettings.Development.json
-
-# Node/Vite
-node_modules/
-dist/
-.vite/
-.env
-.env.*
-
-
 .idea/
 .vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 *.csproj.user
+*.slnx
+
+# Visual Studio cache / temp
+*.cache
+*.tmp
+*.temp
+*.bak
+*.swp
+
+############################################################
+# Build outputs
+############################################################
+[Bb]in/
+[Oo]bj/
+**/[Bb]in/
+**/[Oo]bj/
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.pdb
+*.mdb
+
+# MSBuild/VS artifacts
+*.rsuser
+*.sln.ide
+*.vssscc
+*.psess
+*.vsp
+*.vspx
+*.sdf
+*.opensdf
+
+############################################################
+# Publish / packaging
+############################################################
+publish/
+**/publish/
+*.nupkg
+*.snupkg
+*.nuspec
+artifacts/
+**/artifacts/
+
+############################################################
+# NuGet
+############################################################
+# Usually you do NOT commit packages/ for modern SDK-style projects.
+# Keep this ignored unless you are on old packages.config workflow.
+packages/
+**/packages/
+.nuget/
+# But keep NuGet config / tooling if you use it
+!.nuget/NuGet.Config
+!.nuget/NuGet.targets
+!.nuget/NuGet.props
+
+############################################################
+# ASP.NET Core / local dev
+############################################################
+# Kestrel / HTTPS dev certificates etc (rarely committed)
+*.pfx
+*.p12
+*.pem
+*.key
+
+# Local settings & secrets
+secrets.json
+**/secrets.json
+
+# appsettings:
+# - Commit appsettings.json (safe defaults)
+# - Ignore environment-specific settings by default (where secrets live)
+**/appsettings.*.json
+!**/appsettings.json
+
+# If you want an example template committed, allow it:
+!**/appsettings.*.example.json
+
+# If your team *does* commit Development settings, uncomment this:
+# !**/appsettings.Development.json
+
+# User Secrets (local)
+**/*.usersecrets
+**/*.usersecrets.json
+
+# IIS Express (if used)
+.vs/
+iisexpress/
+.applicationUrl
+
+############################################################
+# .NET tooling / analyzers / code coverage
+############################################################
+.coverage/
+coverage/
+*.lcov
+*.opencover.xml
+*.coverlet.json
+*.coverlet.xml
+
+# Sonar / analysis outputs
+.sonarqube/
+.scannerwork/
+
+# ReSharper / Rider caches
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+.idea/
+
+############################################################
+# Docker / containers (optional)
+############################################################
+# If you have local docker overrides you don't want in git:
+docker-compose.override.yml
+
+############################################################
+# Local databases / files
+############################################################
+*.db
+*.sqlite
+*.sqlite3
+*.mdf
+*.ldf
+
+############################################################
+# Frontend (Node/Vite/React/etc.)
+############################################################
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.vite/
+**/.vite/
+.next/
+out/
+coverage/
+
+# Env files (never commit real secrets)
+.env
+.env.*
+!.env.example
+!.env.template
+
+############################################################
+# Misc
+############################################################
+# Editor swap/backup files
+*~
+*.orig
+
+# Rider/VS sometimes produces these
+*.dbmdl
+*.jfm
+*.pfx

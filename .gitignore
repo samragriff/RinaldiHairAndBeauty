@@ -1,0 +1,23 @@
+# VS junk
+.vs/
+**/.vs/
+*.slnx
+
+# Build outputs
+bin/
+obj/
+
+# Local dev secrets
+**/appsettings.Development.json
+
+# Node/Vite
+node_modules/
+dist/
+.vite/
+.env
+.env.*
+
+
+.idea/
+.vscode/
+*.csproj.user

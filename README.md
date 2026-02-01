@@ -36,12 +36,14 @@ If `dotnet ef` is not found even when installed, the tools folder may not be on 
 - **Default project:** `Rinaldis.Infrastructure`
 - **Startup project:** `Rinaldis.API`
 
-From repo root:
+From **repo root** (no need to set any environment variable—a design-time factory loads `appsettings.Development.json` for you):
 
 ```bash
 dotnet ef migrations add Initial --project Rinaldis.Infrastructure --startup-project Rinaldis.API --output-dir Data/Migrations
 dotnet ef database update --project Rinaldis.Infrastructure --startup-project Rinaldis.API
 ```
+
+Your connection string must use the key **`Default`** in `Rinaldis.API/appsettings.Development.json`: `"ConnectionStrings": { "Default": "..." }`.
 
 ### 3. Run the API
 
@@ -53,7 +55,7 @@ dotnet run
 ```
 
 - API: e.g. `https://localhost:7xxx` (see launchSettings.json).
-- Swagger: `https://localhost:7xxx/swagger`.
+- **API docs (test in browser):** `https://localhost:7xxx/scalar` — open this to try POST/GET endpoints.
 
 ### API endpoints
 
